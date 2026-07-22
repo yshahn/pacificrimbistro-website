@@ -345,8 +345,9 @@ footer{
       <li><a href="#about">About</a></li>
       <li><a href="#specials">Specials</a></li>
       <li><a href="#hours">Hours</a></li>
-      <li><a href="#events">Private Party</a></li>
+<li><a href="#events">Private Party</a></li>
       <li><a href="#events">Catering</a></li>
+      <li><a href="#jobs">Jobs</a></li>
       <li><a href="https://pacificrimatl.com" target="_blank">Reservations</a></li>
       <li><a href="https://pacificrimatl.com" target="_blank" class="cta">Order Online</a></li>
     </ul>
@@ -600,6 +601,98 @@ footer{
     </div>
   </div>
 </div>
+  <!-- JOBS -->
+<section id="jobs" style="background:var(--cream);padding:100px 24px;border-top:1px solid var(--border);">
+  <div style="max-width:700px;margin:0 auto;text-align:center;">
+    <div style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;">Careers</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,46px);font-weight:400;color:var(--ink);margin-bottom:16px;">Join Our Team</h2>
+    <p style="font-size:17px;line-height:1.85;color:#444;margin-bottom:48px;">We're always looking for passionate, talented people to join the Pacific Rim Bistro family. If you love great food and exceptional service, we'd love to hear from you.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:48px;">
+      <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="font-size:32px;margin-bottom:8px;">🍽️</div>
+        <div style="font-size:15px;font-weight:600;margin-bottom:4px;">Server</div>
+        <div style="font-size:12px;color:#888;">Full & Part Time</div>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="font-size:32px;margin-bottom:8px;">🍣</div>
+        <div style="font-size:15px;font-weight:600;margin-bottom:4px;">Sushi Chef</div>
+        <div style="font-size:12px;color:#888;">Full Time</div>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="font-size:32px;margin-bottom:8px;">🍹</div>
+        <div style="font-size:15px;font-weight:600;margin-bottom:4px;">Bartender</div>
+        <div style="font-size:12px;color:#888;">Full & Part Time</div>
+      </div>
+    </div>
+    <button onclick="openJobForm()" style="background:var(--ink);color:var(--gold);padding:16px 48px;border-radius:4px;border:none;font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">Apply Now</button>
+  </div>
+</section>
+
+<!-- JOBS MODAL -->
+<div id="job-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:10000;align-items:center;justify-content:center;padding:20px;overflow-y:auto;">
+  <div style="background:#fff;border-radius:16px;width:100%;max-width:560px;max-height:90vh;overflow-y:auto;margin:auto;">
+    <div style="padding:28px 32px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:#fff;z-index:1;">
+      <div>
+        <div style="font-size:28px;margin-bottom:4px;">💼</div>
+        <div style="font-family:'Playfair Display',serif;font-size:22px;">Job Application</div>
+      </div>
+      <button onclick="closeJobForm()" style="background:none;border:none;font-size:24px;cursor:pointer;color:#aaa;">✕</button>
+    </div>
+    <div style="padding:28px 32px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+        <div>
+          <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Name *</label>
+          <input type="text" id="jp-name" placeholder="Your full name" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;"/>
+        </div>
+        <div>
+          <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Phone *</label>
+          <input type="tel" id="jp-phone" placeholder="(404) 000-0000" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;"/>
+        </div>
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Email *</label>
+        <input type="email" id="jp-email" placeholder="your@email.com" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;"/>
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Position(s) Applying For *</label>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <label style="display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;"><input type="checkbox" value="Server" class="jp-position"/> Server</label>
+          <label style="display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;"><input type="checkbox" value="Sushi Chef" class="jp-position"/> Sushi Chef</label>
+          <label style="display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;"><input type="checkbox" value="Line Cook" class="jp-position"/> Line Cook</label>
+          <label style="display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;"><input type="checkbox" value="Bartender" class="jp-position"/> Bartender</label>
+          <label style="display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;"><input type="checkbox" value="Host/Hostess" class="jp-position"/> Host/Hostess</label>
+          <label style="display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;"><input type="checkbox" value="Busser" class="jp-position"/> Busser</label>
+          <label style="display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;"><input type="checkbox" value="Dishwasher" class="jp-position"/> Dishwasher</label>
+          <label style="display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;"><input type="checkbox" value="Other" class="jp-position"/> Other</label>
+        </div>
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Experience</label>
+        <select id="jp-experience" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;">
+          <option value="">-- Select --</option>
+          <option>No experience (entry level)</option>
+          <option>A few months</option>
+          <option>1–2 years</option>
+          <option>3–5 years</option>
+          <option>5+ years</option>
+        </select>
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Resume Link <span style="color:#aaa;font-weight:400;">(Google Drive, Dropbox, etc.)</span></label>
+        <input type="url" id="jp-resume" placeholder="https://drive.google.com/..." style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;"/>
+      </div>
+      <div style="margin-bottom:24px;">
+        <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Additional Message</label>
+        <textarea id="jp-message" rows="3" placeholder="Tell us a little about yourself..." style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;resize:vertical;box-sizing:border-box;"></textarea>
+      </div>
+      <div id="jp-error" style="display:none;background:#ffebee;color:#c0392b;padding:12px;border-radius:8px;font-size:13px;margin-bottom:16px;"></div>
+      <div id="jp-success" style="display:none;background:#e8f5e9;color:#2e7d32;padding:16px;border-radius:8px;font-size:14px;text-align:center;margin-bottom:16px;">
+        ✅ Your application has been submitted! We'll be in touch soon.
+      </div>
+      <button onclick="submitJobForm()" id="jp-submit-btn" style="width:100%;padding:16px;background:var(--ink);color:var(--gold);border:none;border-radius:8px;font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">Submit Application</button>
+    </div>
+  </div>
+</div>
 <!-- REVIEWS -->
 <section class="reviews">
   <div class="reviews-inner">
@@ -787,6 +880,61 @@ async function submitEventForm() {
     errEl.style.display = 'block';
     btn.textContent = 'Send Inquiry';
     btn.disabled = false;
+  }
+}
+  // ── JOBS FORM
+function openJobForm() {
+  document.getElementById('jp-error').style.display = 'none';
+  document.getElementById('jp-success').style.display = 'none';
+  document.getElementById('jp-submit-btn').style.display = 'block';
+  document.getElementById('job-modal').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeJobForm() {
+  document.getElementById('job-modal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+async function submitJobForm() {
+  const name = document.getElementById('jp-name').value.trim();
+  const phone = document.getElementById('jp-phone').value.trim();
+  const email = document.getElementById('jp-email').value.trim();
+  const errEl = document.getElementById('jp-error');
+  const positions = [...document.querySelectorAll('.jp-position:checked')].map(c => c.value);
+  if (!name || !phone || !email) {
+    errEl.textContent = '⚠️ Please fill in your name, phone, and email.';
+    errEl.style.display = 'block'; return;
+  }
+  if (!email.includes('@')) {
+    errEl.textContent = '⚠️ Please enter a valid email address.';
+    errEl.style.display = 'block'; return;
+  }
+  if (!positions.length) {
+    errEl.textContent = '⚠️ Please select at least one position.';
+    errEl.style.display = 'block'; return;
+  }
+  errEl.style.display = 'none';
+  const btn = document.getElementById('jp-submit-btn');
+  btn.textContent = 'Sending...'; btn.disabled = true;
+  const payload = {
+    name, phone, email, positions,
+    experience: document.getElementById('jp-experience').value,
+    resumeUrl: document.getElementById('jp-resume').value,
+    message: document.getElementById('jp-message').value,
+  };
+  try {
+    const r = await fetch('https://pacificrimatl.com/api/jobs', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    if (r.ok) {
+      document.getElementById('jp-success').style.display = 'block';
+      btn.style.display = 'none';
+    } else { throw new Error('Failed'); }
+  } catch(e) {
+    errEl.textContent = '⚠️ Something went wrong. Please call us at (404) 893-0018.';
+    errEl.style.display = 'block';
+    btn.textContent = 'Submit Application'; btn.disabled = false;
   }
 }
 </script>
