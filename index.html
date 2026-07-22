@@ -345,6 +345,8 @@ footer{
       <li><a href="#about">About</a></li>
       <li><a href="#specials">Specials</a></li>
       <li><a href="#hours">Hours</a></li>
+      <li><a href="#events">Private Party</a></li>
+      <li><a href="#events">Catering</a></li>
       <li><a href="https://pacificrimatl.com" target="_blank">Reservations</a></li>
       <li><a href="https://pacificrimatl.com" target="_blank" class="cta">Order Online</a></li>
     </ul>
@@ -445,7 +447,159 @@ footer{
   <img src="https://static.spotapps.co/spots/bf/d0174fab004d069673b27e57c5794f/full" alt="Sushi"/>
   <img src="https://static.spotapps.co/spots/70/abab5de5684d4ba9db16c74a9f3ad9/full" alt="Sushi"/>
 </div>
+<!-- PRIVATE PARTY & CATERING -->
+<section id="events" style="background:var(--ink);padding:100px 24px;border-top:1px solid var(--border);">
+  <div style="max-width:1100px;margin:0 auto;text-align:center;margin-bottom:56px;">
+    <div style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;">Events & Catering</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,46px);font-weight:400;color:#fff;margin-bottom:16px;">Host Your Next Event With Us</h2>
+    <p style="font-size:17px;line-height:1.85;color:rgba(255,255,255,0.6);max-width:600px;margin:0 auto;">From intimate gatherings to large corporate events, Pacific Rim Bistro offers exceptional private dining and catering experiences.</p>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+    <!-- Private Party Card -->
+    <div style="background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:16px;padding:40px;text-align:center;">
+      <div style="font-size:48px;margin-bottom:16px;">🎉</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:28px;color:#fff;font-weight:400;margin-bottom:12px;">Private Party</h3>
+      <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:28px;">Host your birthday, anniversary, corporate event, or any special occasion in our elegant private dining space. Perfect for groups of all sizes.</p>
+      <ul style="text-align:left;list-style:none;padding:0;margin:0 0 28px;display:flex;flex-direction:column;gap:10px;">
+        <li style="font-size:13px;color:rgba(255,255,255,0.7);display:flex;align-items:center;gap:8px;"><span style="color:var(--gold);">✓</span> Private dining room available</li>
+        <li style="font-size:13px;color:rgba(255,255,255,0.7);display:flex;align-items:center;gap:8px;"><span style="color:var(--gold);">✓</span> Customizable menu options</li>
+        <li style="font-size:13px;color:rgba(255,255,255,0.7);display:flex;align-items:center;gap:8px;"><span style="color:var(--gold);">✓</span> Full bar service</li>
+        <li style="font-size:13px;color:rgba(255,255,255,0.7);display:flex;align-items:center;gap:8px;"><span style="color:var(--gold);">✓</span> Groups of 10–100 guests</li>
+      </ul>
+      <button onclick="openEventForm('private_party')" style="background:var(--gold);color:var(--ink);padding:14px 32px;border-radius:4px;border:none;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;width:100%;">Inquire Now</button>
+    </div>
+    <!-- Catering Card -->
+    <div style="background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:16px;padding:40px;text-align:center;">
+      <div style="font-size:48px;margin-bottom:16px;">🍱</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:28px;color:#fff;font-weight:400;margin-bottom:12px;">Catering</h3>
+      <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:28px;">Bring the flavors of Pacific Rim to your office, home, or venue. Our catering service delivers an authentic Pan-Asian experience wherever you are.</p>
+      <ul style="text-align:left;list-style:none;padding:0;margin:0 0 28px;display:flex;flex-direction:column;gap:10px;">
+        <li style="font-size:13px;color:rgba(255,255,255,0.7);display:flex;align-items:center;gap:8px;"><span style="color:var(--gold);">✓</span> Office & corporate catering</li>
+        <li style="font-size:13px;color:rgba(255,255,255,0.7);display:flex;align-items:center;gap:8px;"><span style="color:var(--gold);">✓</span> Weddings & social events</li>
+        <li style="font-size:13px;color:rgba(255,255,255,0.7);display:flex;align-items:center;gap:8px;"><span style="color:var(--gold);">✓</span> Custom menu planning</li>
+        <li style="font-size:13px;color:rgba(255,255,255,0.7);display:flex;align-items:center;gap:8px;"><span style="color:var(--gold);">✓</span> Delivery & setup available</li>
+      </ul>
+      <button onclick="openEventForm('catering')" style="background:transparent;color:var(--gold);padding:14px 32px;border-radius:4px;border:1px solid var(--gold);font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;width:100%;">Get a Quote</button>
+    </div>
+  </div>
+</section>
 
+<!-- PRIVATE PARTY / CATERING MODAL -->
+<div id="event-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:10000;align-items:center;justify-content:center;padding:20px;overflow-y:auto;">
+  <div style="background:#fff;border-radius:16px;width:100%;max-width:560px;max-height:90vh;overflow-y:auto;margin:auto;">
+    <div style="padding:28px 32px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:#fff;z-index:1;">
+      <div>
+        <div id="event-modal-emoji" style="font-size:28px;margin-bottom:4px;">🎉</div>
+        <div id="event-modal-title" style="font-family:'Playfair Display',serif;font-size:22px;">Private Party Inquiry</div>
+      </div>
+      <button onclick="closeEventForm()" style="background:none;border:none;font-size:24px;cursor:pointer;color:#aaa;">✕</button>
+    </div>
+    <div style="padding:28px 32px;">
+      <input type="hidden" id="event-type"/>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+        <div>
+          <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Name *</label>
+          <input type="text" id="ep-name" placeholder="Your full name" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;"/>
+        </div>
+        <div>
+          <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Phone *</label>
+          <input type="tel" id="ep-phone" placeholder="(404) 000-0000" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;"/>
+        </div>
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Email *</label>
+        <input type="email" id="ep-email" placeholder="your@email.com" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;"/>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+        <div>
+          <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Preferred Date</label>
+          <input type="date" id="ep-date" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;"/>
+        </div>
+        <div>
+          <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Preferred Time</label>
+          <select id="ep-time" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;">
+            <option value="">-- Select --</option>
+            <option>11:30 AM</option><option>12:00 PM</option><option>12:30 PM</option>
+            <option>1:00 PM</option><option>5:00 PM</option><option>5:30 PM</option>
+            <option>6:00 PM</option><option>6:30 PM</option><option>7:00 PM</option>
+            <option>7:30 PM</option><option>8:00 PM</option>
+          </select>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+        <div>
+          <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Number of Guests</label>
+          <input type="number" id="ep-guests" placeholder="e.g. 30" min="1" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;"/>
+        </div>
+        <div>
+          <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Budget per Person</label>
+          <select id="ep-budget" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;">
+            <option value="">-- Select --</option>
+            <option value="25">Under $25</option>
+            <option value="50">$25 – $50</option>
+            <option value="75">$50 – $75</option>
+            <option value="100">$75 – $100</option>
+            <option value="100+">$100+</option>
+          </select>
+        </div>
+      </div>
+      <!-- Private Party fields -->
+      <div id="ep-party-fields">
+        <div style="margin-bottom:16px;">
+          <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Occasion</label>
+          <select id="ep-occasion" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;">
+            <option value="">-- Select --</option>
+            <option>Birthday Party</option>
+            <option>Anniversary</option>
+            <option>Business/Office/Corporate Function</option>
+            <option>Wedding Reception</option>
+            <option>Holiday Party</option>
+            <option>Graduation</option>
+            <option>Baby Shower</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div style="margin-bottom:16px;">
+          <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Preferred Space</label>
+          <select id="ep-space" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;">
+            <option value="">-- Select --</option>
+            <option>Private Dining Room</option>
+            <option>Full Restaurant Buyout</option>
+            <option>Outdoor Patio</option>
+            <option>Bar Area</option>
+            <option>No Preference</option>
+          </select>
+        </div>
+      </div>
+      <!-- Catering fields -->
+      <div id="ep-catering-fields" style="display:none;">
+        <div style="margin-bottom:16px;">
+          <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Event Location</label>
+          <input type="text" id="ep-location" placeholder="Address or venue name" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;"/>
+        </div>
+        <div style="margin-bottom:16px;">
+          <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Menu Preference</label>
+          <select id="ep-menu" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;">
+            <option value="">-- Select --</option>
+            <option>Sushi & Rolls</option>
+            <option>Pan-Asian Buffet</option>
+            <option>Custom Menu</option>
+            <option>No Preference</option>
+          </select>
+        </div>
+      </div>
+      <div style="margin-bottom:24px;">
+        <label style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.05em;text-transform:uppercase;display:block;margin-bottom:6px;">Additional Notes</label>
+        <textarea id="ep-message" rows="3" placeholder="Any special requests or questions..." style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;resize:vertical;box-sizing:border-box;"></textarea>
+      </div>
+      <div id="ep-error" style="display:none;background:#ffebee;color:#c0392b;padding:12px;border-radius:8px;font-size:13px;margin-bottom:16px;"></div>
+      <div id="ep-success" style="display:none;background:#e8f5e9;color:#2e7d32;padding:16px;border-radius:8px;font-size:14px;text-align:center;margin-bottom:16px;">
+        ✅ Your inquiry has been sent! We'll get back to you within 24 hours.
+      </div>
+      <button onclick="submitEventForm()" id="ep-submit-btn" style="width:100%;padding:16px;background:var(--ink);color:var(--gold);border:none;border-radius:8px;font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">Send Inquiry</button>
+    </div>
+  </div>
+</div>
 <!-- REVIEWS -->
 <section class="reviews">
   <div class="reviews-inner">
@@ -558,6 +712,83 @@ function startTimer(){
   timer = setInterval(()=>goTo((current+1)%slides.length), 5000);
 }
 startTimer();
+
+// ── PRIVATE PARTY / CATERING FORM
+function openEventForm(type) {
+  const isParty = type === 'private_party';
+  document.getElementById('event-type').value = type;
+  document.getElementById('event-modal-emoji').textContent = isParty ? '🎉' : '🍱';
+  document.getElementById('event-modal-title').textContent = isParty ? 'Private Party Inquiry' : 'Catering Inquiry';
+  document.getElementById('ep-party-fields').style.display = isParty ? 'block' : 'none';
+  document.getElementById('ep-catering-fields').style.display = isParty ? 'none' : 'block';
+  document.getElementById('ep-error').style.display = 'none';
+  document.getElementById('ep-success').style.display = 'none';
+  document.getElementById('ep-submit-btn').style.display = 'block';
+  document.getElementById('event-modal').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeEventForm() {
+  document.getElementById('event-modal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+async function submitEventForm() {
+  const name = document.getElementById('ep-name').value.trim();
+  const phone = document.getElementById('ep-phone').value.trim();
+  const email = document.getElementById('ep-email').value.trim();
+  const errEl = document.getElementById('ep-error');
+  if (!name || !phone || !email) {
+    errEl.textContent = '⚠️ Please fill in your name, phone, and email.';
+    errEl.style.display = 'block';
+    return;
+  }
+  if (!email.includes('@')) {
+    errEl.textContent = '⚠️ Please enter a valid email address.';
+    errEl.style.display = 'block';
+    return;
+  }
+  errEl.style.display = 'none';
+  const btn = document.getElementById('ep-submit-btn');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  const type = document.getElementById('event-type').value;
+  const isParty = type === 'private_party';
+  const payload = {
+    type,
+    name,
+    phone,
+    email,
+    date: document.getElementById('ep-date').value,
+    time: document.getElementById('ep-time').value,
+    guests: document.getElementById('ep-guests').value,
+    budget: document.getElementById('ep-budget').value,
+    message: document.getElementById('ep-message').value,
+    ...(isParty ? {
+      occasion: document.getElementById('ep-occasion').value,
+      space: document.getElementById('ep-space').value,
+    } : {
+      location: document.getElementById('ep-location').value,
+      menu: document.getElementById('ep-menu').value,
+    }),
+  };
+  try {
+    const r = await fetch('https://pacificrimatl.com/api/private-party', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    if (r.ok) {
+      document.getElementById('ep-success').style.display = 'block';
+      btn.style.display = 'none';
+    } else {
+      throw new Error('Failed');
+    }
+  } catch(e) {
+    errEl.textContent = '⚠️ Something went wrong. Please call us at (404) 893-0018.';
+    errEl.style.display = 'block';
+    btn.textContent = 'Send Inquiry';
+    btn.disabled = false;
+  }
+}
 </script>
 </body>
 </html>
